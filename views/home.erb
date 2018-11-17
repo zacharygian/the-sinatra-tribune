@@ -1,0 +1,8 @@
+<% @database.each_with_index do |post, index| %>
+  <div class="article-wrapper" >
+    <h2><%= post[:title] %></h2>
+    <br>
+    <p><%= post[:content] %></p>
+    <a href="/posts/<%= index + 1 %>">View Post</a>
+  </div>
+<% end %>
