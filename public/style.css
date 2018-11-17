@@ -1,10 +1,29 @@
 .article-wrapper {
-  margin-left: 30%;
-  margin-right: 30%;
+  margin-top: 30px;
+  margin-left: 25%;
+  margin-right: 25%;
   margin-bottom: 10px;
-  width: 400 px;
-  height: 200px;
+  padding: 10px;
+  height: auto;
   border: 1px solid black;
+  border-radius: 5px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.comments {
+
+}
+
+.comment-box {
+  background: gray;
+  border: 1px solid black;
+}
+
+.comment-box li {
+  display: inline-block;
 }
 
 

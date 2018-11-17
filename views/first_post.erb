@@ -1,10 +1,25 @@
 <h2><%= @post[:title] %></h2>
-<p><%= @post[:content] %></p>
-<p><%= @post[:rating] %></p>
 
-<p>Comments</p>
-<% @comments.each do |comment| %>
-  <li><%= comment %></li>
-<% end %>
+<div class="article-wrapper">
+
+  <p>Rating:
+    <% @post[:rating].to_i.times do  %>
+      <i class="fas fa-star"></i>
+    <% end %>
+  </p>
+
+  <p><%= @post[:content] %></p>
+
+  <p>Comments</p>
+  <% @comments.each do |comment| %>
+    <div class=comments>
+      <div class="comment-box">
+        <li><%= comment %></li>
+      </div>
+    </div>
+  <% end %>
+</div>
+
 
 <a href="/">Back To Homepage</a>
+
