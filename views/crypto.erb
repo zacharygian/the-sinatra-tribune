@@ -1,0 +1,11 @@
+<h2>Top Crypto Headlines of <%= @date %>, from Crypto Coin News</h2>
+
+<% @crypto["articles"].each do |article| %>
+  <li>
+    <a href="<%= article["url"] %>" target="_blank"><%= article["title"] %></a>
+  </li>
+  <p><%= article["description"] %></p>
+<% end %>
+
+<a href="/">Back To Homepage</a>
+<a href="/more_news">Browse more news!</a>
