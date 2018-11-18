@@ -15,17 +15,16 @@
     </div>
   <% end %>
   <p><%= @post[:content] %></p>
-
+  <br>
   <p><strong>Comments:</strong></p>
-  <% @comments.each do |comment| %>
-    <div class=comments>
+  <div class=comments>
+    <% @comments.each do |comment| %>
       <div class="comment-box">
-        <li><%= comment %></li>
+        <li><strong>&#x3e;</strong> <%= comment %></li>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>
-
 
 <a href="/" class="button"><i class="fas fa-arrow-left"></i> Back To Homepage</a>
 
