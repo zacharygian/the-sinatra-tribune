@@ -1,5 +1,6 @@
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Noto+Sans+TC');
+@import url('https://fonts.googleapis.com/css?family=Lato');
 
 /* Style */
 
@@ -8,9 +9,22 @@ nav {
   position: fixed;
 }
 
-.navbar li:hover {
+.navbar li {
+  border-bottom: 4px solid transparent;
+  margin-right: 30px;
+}
+
+/*.navbar li:hover {
   background-color: #ECF0F1;
   color: black;
+}
+*/
+
+.navbar li:hover,
+.navbar li:active {
+  /*background-color: #ECF0F1;*/
+  color: black;
+  border-bottom: 4px solid #484848;
 }
 
 .navbar-brand {
