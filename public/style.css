@@ -4,6 +4,10 @@
 
 /* Style */
 
+body {
+  line-height: 1.8;
+}
+
 nav {
   margin-bottom: 20px;
   position: fixed;
@@ -26,7 +30,7 @@ nav {
   font-weight: 500px;
 }
 
-h1 {
+h1, h2, h6 {
   text-align: center;
 }
 
@@ -62,36 +66,52 @@ h1 {
 }
 
 .container {
-  display: flex;
+  /*display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: center;*/
+  /*align-items: center;*/
   margin: 0 auto;
+  justify-content: center;
+  height: 75vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-content: space-around;
 }
 
-.flex-wrap-center {
-  display: flex;
-  flex-wrap: wrap;
+.grid-wrap-center {
+  display: grid;
+  grid-template-columns: 2fr repeat(2, 4fr);
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 30px;
+  margin: 0 auto;
+  /*display: flex;
+  flex-wrap: wrap;*/
   justify-content: center;
+  align-items: center;
 }
 
 .container a {
   text-decoration: none !important;
   color: inherit;
-}
-
-.news-box {
   padding: 40px;
-  width: 180px;
   border: 1px solid #dedede;
   color: #a0a0a0;
-  margin-right: 10px;
-  margin-bottom: 10px;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  cursor: pointer;
 }
+
+/*.news-box {
+  padding: 40px;
+  /*width: 180px;*/
+  /*border: 1px solid #dedede;*/
+  /*color: #a0a0a0;*/
+  /*margin-right: 10px;
+  margin-bottom: 10px;
+  text-align: center;*/
+  /*display: flex;
+  flex-direction: column;
+  cursor: pointer;*/
+/*}*/
 
 .news-box i {
   font-size: 27px;
@@ -142,18 +162,20 @@ h1 {
 }  
 */
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {  
+/*@media only screen and (min-width: 992px) {  
   .article-wrapper {
     margin: 30px 15vw 10px 15vw;
   }
-}  
+}  */
 
 /* Medium devices (landscape tablets, 768px and up) */ 
 /*@media only screen and (max-width: 768px) {  
 
-}  
+}  */
 
- Small devices (portrait tablets and large phones, 600px and up) 
-@media only screen and (max-width: 600px) {  
-
+ /*Small devices (portrait tablets and large phones, 600px and up) */
+/*@media only screen and (max-width: 600px) {  
+  .container {
+    margin-top: 300px;
+  }
 } */
