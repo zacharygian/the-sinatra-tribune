@@ -1,10 +1,30 @@
-<h2><%= @post[:title] %></h2>
-<p><%= @post[:content] %></p>
-<p><%= @post[:rating] %></p>
+<div class="article-wrapper">
+  <h2><%= @post[:title] %></h2>
 
-<p>Comments</p>
-<% @comments.each do |comment| %>
-  <li><%= comment %></li>
-<% end %>
+  <% if @post[:rating] %>
+    <p><strong>Rating:</strong>
+      <% @post[:rating].to_i.times do  %>
+        <i class="fas fa-star"></i>
+      <% end %>
+    </p>
+  <% end %>
 
-<a href="/">Back To Homepage</a>
+  <% if @post[:photo] %>
+    <div class="post-photo">
+      <img src="<%= @post[:photo]%>" style="width: 400px; height: 300px;">
+    </div>
+  <% end %>
+  <p><%= @post[:content] %></p>
+
+  <p><strong>Comments:</strong></p>
+  <% @comments.each do |comment| %>
+    <div class=comments>
+      <div class="comment-box">
+        <li><%= comment %></li>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+
+<a href="/" class="button"><i class="fas fa-arrow-left"></i> Back To Homepage</a>
