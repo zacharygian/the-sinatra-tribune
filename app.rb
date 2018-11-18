@@ -18,6 +18,7 @@ end
 # Routes
 get "/" do
   @database = DB
+  @date = nice_date(Date.today)
   erb :home
 end
 
