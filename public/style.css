@@ -14,15 +14,8 @@ nav {
   margin-right: 30px;
 }
 
-/*.navbar li:hover {
-  background-color: #ECF0F1;
-  color: black;
-}
-*/
-
 .navbar li:hover,
 .navbar li:active {
-  /*background-color: #ECF0F1;*/
   color: black;
   border-bottom: 4px solid #484848;
 }
@@ -46,14 +39,14 @@ h1 {
   height: auto;
   border: 1px solid black;
   border-radius: 5px;
+  transition: all 0.2s;
+  box-shadow: 0px 0px 0px #000;
 }
 
 .home-article:hover {
   background-color: #ECF0F1;
-}
-
-.comments {
-
+  box-shadow: 3px 3px 5px #484848;
+  transform: scale(1.02);
 }
 
 .comment-box {
