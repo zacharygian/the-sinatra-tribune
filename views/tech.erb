@@ -1,11 +1,13 @@
-<h2>Top Tech Headlines of <%= @date %>, from TechCrunch</h2>
+<h2 style="text-align: center;">Top Tech Headlines of <%= @date %> from TechCrunch</h2>
 
 <% @tech["articles"].each do |article| %>
-  <li>
+  <div class="article-wrapper" >
     <a href="<%= article["url"] %>" target="_blank"><%= article["title"] %></a>
-  </li>
-  <p><%= article["description"] %></p>
+    <br>
+    <p><span id="description">Description: </span><%= article["description"] %></p>
+  </div>
 <% end %>
 
-<a href="/">Back To Homepage</a>
-<a href="/more_news">Browse more news!</a>
+<a href="/" class="button"><i class="fas fa-arrow-left"></i> Back To Homepage</a>
+<a href="/more_news" class="button">Browse more news!</a>
+

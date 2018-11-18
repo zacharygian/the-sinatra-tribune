@@ -1,9 +1,8 @@
 <h1><%= @date %></h1>
 <% @database.each_with_index do |post, index| %>
-  <div class="article-wrapper" >
+  <div class="article-wrapper home-article" >
     <h2><%= post[:title] %></h2>
     <br>
-    <img src="<%= post[:photo]%>">
     <p><%= post[:content] %></p>
     <a href="/posts/<%= index + 1 %>">View Post & Comments</a>
   </div>
