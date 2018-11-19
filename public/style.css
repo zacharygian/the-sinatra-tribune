@@ -7,6 +7,10 @@ body {
   line-height: 1.8;
 }
 
+h1 {
+  text-align: center;
+}
+
 nav {
   margin-bottom: 20px;
   position: fixed;
@@ -27,10 +31,6 @@ nav {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500px;
   letter-spacing: 5px;
-}
-
-h1 {
-  text-align: center;
 }
 
 .article-wrapper {
@@ -63,7 +63,6 @@ h1 {
 .comment-box li {
   display: inline-block;
 }
-
 
 
 .container {
