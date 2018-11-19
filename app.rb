@@ -6,6 +6,10 @@ require "sinatra/reloader" if development?
 require_relative "database"
 
 # Methods
+def full_date(date)
+  date.strftime("%A %e %B %Y")
+end
+
 def nice_date(date)
   date.strftime("%b %d, %Y")
 end
@@ -18,7 +22,7 @@ end
 # Routes
 get "/" do
   @database = DB
-  @date = nice_date(Date.today)
+  @date = full_date(Date.today)
   erb :home
 end
 
